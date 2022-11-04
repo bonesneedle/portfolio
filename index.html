@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/swiper.min.css?_v=20221104210116"> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221104210116">
+	<title>Портфолио</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__body">
+					<a href="#" class="header__logo-block">
+						<div class="header__text">bonesneedle</div>
+					</a>
+					<nav class="header__menu menu-header">
+						<ul class="menu-header__list">
+							<li><a href="#" target="_blank" class="menu-header__link menu-header__link-active link">Home</a>
+							</li>
+							<li><a href="#" class="menu-header__link link">About me</a></li>
+							<li><a href="#portfolio" class="menu-header__link link">Portfolio</a></li>
+							<li><a href="#" data-contact class="menu-header__link link">Contact</a></li>
+						</ul>
+					</nav>
+					<div class="burger-menu"><span></span></div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__main-section main-section">
+				<div class="main-section__container container">
+					<div class="main-section__body">
+						<div class="main-section__info">
+							<div class="main-section__subtittle tittle">Привет, меня зовут</div>
+							<div class="main-section__tittle">Путников Сергей</div>
+							<div class="main-section__text">Я занимаюсь <span>front-end</span> разработкой сайтов. Использую
+								такие инструмены как: html, css, sass, js, jQuery.
+							</div>
+							<a href="#" data-contact class="main-section__button">
+								связаться со мной
+							</a>
+						</div>
+						<div class="main-section__img-block img-block-main-section">
+							<div class="img-block-main-section__body">
+								<div class="img-block-main-section__img">
+									<picture><source srcset="img/myAvatar.webp" type="image/webp"><img src="img/myAvatar.png" alt="avatar"></picture>
+								</div>
+								<div class="img-block-main-section__item img-block-main-section__item-html">html</div>
+								<div class="img-block-main-section__item img-block-main-section__item-css">css</div>
+								<div class="img-block-main-section__item img-block-main-section__item-sass">sass</div>
+								<div class="img-block-main-section__item img-block-main-section__item-js">js</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__portfolio portfolio" id="portfolio">
+				<div class="portfolio__container container">
+					<div class="portfolio__tittle tittle">portfolio</div>
+					<div class="portfolio__row">
+						<div class="portfolio__arrow portfolio__arrow-prev swiper-button-prev swiper-arrow">
+							<span class="_icon-arrow"></span>
+						</div>
+						<div class="portfolio__slider swiper">
+							<div class="portfolio__slides swiper-wrapper">
+								<div class="portfolio__slide slide-portfolio swiper-slide">
+									<div class="slide-portfolio__img">
+										<picture><source srcset="img/portfolio/sport.webp" type="image/webp"><img src="img/portfolio/sport.jpg" alt="sport site" data-open="true"></picture>
+									</div>
+									<div class="slide-portfolio__body">
+										<div class="slide-portfolio__tittle tittle-small">Landing Fintess Gym</div>
+										<div class="slide-portfolio__text text"></div>
+										<a href="https://bonesneedle.github.io/sport-project/" target="_blank"
+											class="slide-portfolio__btn"><span class="_icon-arrow">Посмотреть
+												больше</span></a>
+									</div>
+								</div>
+								<div class="portfolio__slide slide-portfolio swiper-slide">
+									<div class="slide-portfolio__img">
+										<picture><source srcset="img/portfolio/Locus.webp" type="image/webp"><img src="img/portfolio/Locus.jpg" alt="locus site" data-open="true"></picture>
+									</div>
+									<div class="slide-portfolio__body">
+										<div class="slide-portfolio__tittle tittle-small">Landing Locus Site</div>
+										<div class="slide-portfolio__text text">Lorem ipsum dolor sit amet consectetur adipisicing
+											elit. Nemo earum ducimus deleniti, officiis a iusto quas laborum, ad assumenda nostrum
+											modi, cumque molestias sit officia beatae esse rem in fuga.</div>
+										<a href="https://bonesneedle.github.io/locus/" target="_blank"
+											class="slide-portfolio__btn"><span class="_icon-arrow">Посмотреть
+												больше</span></a>
+									</div>
+								</div>
+								<div class="portfolio__slide slide-portfolio swiper-slide">
+									<div class="slide-portfolio__img">
+										<picture><source srcset="img/portfolio/work.webp" type="image/webp"><img src="img/portfolio/work.jpg" alt="work site" data-open="true"></picture>
+									</div>
+									<div class="slide-portfolio__body">
+										<div class="slide-portfolio__tittle tittle-small">Landing Work Site</div>
+										<div class="slide-portfolio__text text"></div>
+										<a href="https://bonesneedle.github.io/work-site/" target="_blank"
+											class="slide-portfolio__btn"><span class="_icon-arrow">Посмотреть
+												больше</span></a>
+									</div>
+								</div>
+								<div class="portfolio__slide slide-portfolio swiper-slide">
+									<div class="slide-portfolio__img">
+										<picture><source srcset="img/portfolio/restaurant-burger.webp" type="image/webp"><img src="img/portfolio/restaurant-burger.jpg" alt="restaurant-burger" data-open="true"></picture>
+									</div>
+									<div class="slide-portfolio__body">
+										<div class="slide-portfolio__tittle tittle-small">Landing Restaurant Burger</div>
+										<div class="slide-portfolio__text text"></div>
+										<a href="https://bonesneedle.github.io/restaurant-burger/" target="_blank"
+											class="slide-portfolio__btn"><span class="_icon-arrow">Посмотреть
+												больше</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__arrow portfolio__arrow-next swiper-button-next swiper-arrow">
+							<span class="_icon-arrow"></span>
+						</div>
+					</div>
+					<div class="portfolio__pagination swiper-pagination"></div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer"></footer>
+	</div>
+	<div class="contact">
+		<div class="contact__container">
+			<span class="contact__close">X</span>
+			<div class="contact__body">
+				<div class="contact__item">
+					<div class="contact__name">Instagram</div>
+					<a href="http://instagram.com/bonesneedle/" target="_blank" class="contact__link">@bonesneedle</a>
+				</div>
+				<div class="contact__item">
+					<div class="contact__name">Mail</div>
+					<a href="mailto:putnickov17@mail.ru" target="_blank" class="contact__link">putnickov17@mail.ru</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221104210116"></script>
+	<script src="js/swiper-bundle.min.js?_v=20221104210116"></script>
+</body>
+
+</html>
