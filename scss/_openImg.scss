@@ -1,0 +1,83 @@
+.open-img {
+	padding: 20px 20px;
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	//animation animbBg
+	animation: animBg;
+	animation-timing-function: ease;
+	animation-duration: 0.3s;
+	img {
+		z-index: 1;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 90%;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		//animation animImg
+		animation: animImg;
+		animation-timing-function: ease;
+		animation-duration: 0.3s;
+	}
+	&__close {
+		z-index: 2;
+		cursor: pointer;
+		position: absolute;
+		display: block;
+		width: 50px;
+		height: 50px;
+		right: 40px;
+		top: 40px;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			background-color: #fff;
+			left: 0;
+			transition: all 0.5s ease 0s;
+			border-radius: 10px;
+		}
+		&::after {
+			bottom: 50%;
+			transform: rotate(-45deg) translateY(50%);
+		}
+		&::before {
+			top: 50%;
+			transform: rotate(45deg) translateY(-50%);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&:hover {
+					&::after,
+					&::before {
+						background-color: red;
+					}
+				}
+			}
+		}
+	}
+}
+@keyframes animBg {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes animImg {
+	0% {
+		transform: scale(0) translate(-50%, -50%);
+	}
+	100% {
+		transform: scale(1) translate(-50%, -50%);
+	}
+}

@@ -1,0 +1,129 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Arodora Pro;
+	font-weight: 300;
+	font-size: 18px;
+	color: $colorGrayText;
+	background-color: #ccc;
+	overflow-x: hidden;
+}
+//===================================================================================================================================================================
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+.container {
+	max-width: #{$maxWidthContainer} + px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+//===================================================================================================================================================================
+.page {
+	// .page__main-section
+	&__main-section {
+	}
+	// .page__portfolio
+	&__portfolio {
+	}
+}
+//===================================================================================================================================================================
+.link {
+	font-size: 18px;
+	color: $colorGrayText;
+	transition: color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $colorBlue;
+		}
+	}
+}
+.tittle {
+	font-family: NEXT ART;
+	font-weight: 400;
+	@include adaptive-value("font-size", 48, 24, 1);
+	line-height: 54 / 48 * 100%;
+	color: $colorGrayText;
+}
+.tittle-small {
+	font-weight: 300;
+	@include adaptive-value("font-size", 24, 18, 1);
+	line-height: 29 / 24 * 100%;
+	color: #ffffff;
+}
+.text {
+	font-weight: 300;
+	@include adaptive-value("font-size", 18, 14, 1);
+	line-height: 21 / 18 * 100%;
+	color: #ffffff;
+}
+//===================================================================================================================================================================
+.swiper {
+}
+.swiper-wrapper {
+	position: static;
+}
+.swiper-slide {
+}
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.swiper-pagination-bullet {
+	display: block;
+	@include adaptive-value("width", 20, 10, 1);
+	@include adaptive-value("height", 20, 10, 1);
+	background-color: transparent;
+	border: 2px solid $colorYellow;
+	border-radius: 50%;
+	transition: background-color 0.5s ease 0s;
+	&.swiper-pagination-bullet-active {
+		background-color: $colorYellow;
+	}
+}
+.swiper-arrow {
+	width: 60px;
+	height: 60px;
+	@include adaptive-value("width", 60, 20, 1);
+	@include adaptive-value("height", 60, 20, 1);
+	background-color: $colorYellow;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	@include adaptive-value("font-size", 36, 26, 1);
+	span {
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+	@media (any-hover: hover) {
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: $colorYellow;
+			background-color: $colorGrayDark;
+		}
+	}
+	span {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		&::before {
+		}
+	}
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+	span {
+		&::before {
+			transform: rotate(180deg) translate(0, -10%);
+		}
+	}
+}
+//===================================================================================================================================================================
