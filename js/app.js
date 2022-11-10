@@ -1,3 +1,6 @@
+
+import * as swiperJs from './swiper-bundle.min.js';
+
 const header = document.querySelector('.header');
 const headerMenu = document.querySelector('.header__menu');
 const headerBurger = document.querySelector('.burger-menu');
@@ -31,25 +34,6 @@ document.addEventListener("click", (e) => {
 	}
 	//<<POPUP
 
-	//OPEN IMG BY CLICK>>==add to img data-open="true"===========
-	if (target.closest('img[data-open="true"]')) {
-		let img = target.closest('img[data-open="true"]');
-		let sourceImg = img.getAttribute('src');
-		let altImg = img.getAttribute('alt');
-		body.insertAdjacentHTML('afterbegin',
-			`<div class="open-img"><span class="open-img__close"></span><img src="${sourceImg}" alt="${altImg}"></div>`);
-		bodyLock();
-	}
-	//close by click closeSpan
-	if (target.closest('.open-img__close')) {
-		CloseImg();
-	}
-	//close by click to background
-	if (target == target.closest('.open-img')) {
-		CloseImg();
-	}
-	//<<open imbg ny click==
-
 	if (window.innerWidth <= 767) {
 		if (target.classList.contains('menu-header__link') && !target.hasAttribute('data-contact')) {
 			if (headerMenu.classList.contains('active')) {
@@ -60,20 +44,6 @@ document.addEventListener("click", (e) => {
 		}
 	}
 });
-document.addEventListener("keydown", (e) => {
-	if (window.innerWidth >= 998) {
-		if (e.code == "Escape") // Escape
-		{
-			hidePopUp(contact, "active");
-			//close by click to "Escape"
-			if (e.code == "Escape") {
-				CloseImg();
-			}
-			//<<open imbg by click==
-		}
-	}
-});
-
 document.addEventListener("scroll", (e) => {
 	const target = e.target;
 	if (window.scrollY >= 40) {
@@ -133,7 +103,6 @@ function CloseImg() {
 	bodyUnlock();
 }
 //===================================================================================================================================================================
-import * as swiperJs from './swiper-bundle.min.js';
 
 new Swiper('.portfolio__slider', {
 	// Optional parameters

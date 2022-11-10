@@ -42,6 +42,7 @@ $colorYellow: #e2a100;
 			only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
 			display: block;
 			text-align: center;
+			padding-bottom: 30px;
 		}
 	}
 
@@ -262,6 +263,7 @@ $colorYellow: #e2a100;
 			flex: 1 1 auto;
 		}
 		@media (max-width: 767px) {
+			display: block;
 			margin: 0px 0px 20px 0px;
 		}
 		border-radius: 25px;
